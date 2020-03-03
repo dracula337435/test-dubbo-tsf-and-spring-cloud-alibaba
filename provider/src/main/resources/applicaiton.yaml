@@ -1,0 +1,13 @@
+dubbo:
+  scan:
+    base-package: io.dracula.test.dubbo.tsf.and.alibaba.provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+
+spring:
+  name: test-dubbo-tsf-alibaba-provider
+  main:
+    allow-bean-definition-overriding: true
