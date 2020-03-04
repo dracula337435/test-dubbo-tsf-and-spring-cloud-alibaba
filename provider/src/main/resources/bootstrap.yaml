@@ -1,0 +1,4 @@
+# 若name在application中，spring-cloud和dubbo均失败
+spring:
+  application:
+    name: test-dubbo-tsf-alibaba-provider
