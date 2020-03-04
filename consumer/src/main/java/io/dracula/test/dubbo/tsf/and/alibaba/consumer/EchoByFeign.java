@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient("test-dubbo-tsf-alibaba-provider")
 public interface EchoByFeign {
 
-    @GetMapping("/hello")
-    String say(@RequestParam(value = "name", defaultValue = "world") String name);
+    /**
+     *
+     * @param msg
+     * @return
+     */
+    @GetMapping("/echo")
+    String echo(@RequestParam(value = "msg", defaultValue = "hello") String msg);
 
 }
