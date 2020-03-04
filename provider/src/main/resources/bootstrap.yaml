@@ -1,3 +1,13 @@
+#
+dubbo:
+  scan:
+    base-package: io.dracula.test.dubbo.tsf.and.alibaba.provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+
 # 若name在application中，spring-cloud和dubbo均失败
 spring:
   application:
