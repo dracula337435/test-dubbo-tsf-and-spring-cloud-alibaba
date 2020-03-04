@@ -1,5 +1,6 @@
 package io.dracula.test.dubbo.tsf.and.alibaba.consumer;
 
+import io.dracula.test.dubbo.tsf.and.alibaba.api.EchoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,19 @@ public class ConsumerController {
     @Autowired
     private EchoByFeign echoByFeign;
 
-    @GetMapping("/remoteHello")
-    public String toRemoteHello(){
+    @GetMapping("/echoController")
+    public String echoController(){
         String result = echoByFeign.echo(null);
+        logger.info("将要返回："+result);
+        return result;
+    }
+
+    @org.apache.dubbo.config.annotation.Reference
+    private EchoService echoService;
+
+    @GetMapping("/echoDubbo")
+    public String echoDubbo(){
+        String result = echoService.echo(null);
         logger.info("将要返回："+result);
         return result;
     }

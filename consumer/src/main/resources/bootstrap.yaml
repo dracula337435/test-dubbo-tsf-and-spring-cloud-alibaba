@@ -1,4 +1,10 @@
 #
+dubbo:
+  scan:
+    base-package: io.dracula.test.dubbo.tsf.and.alibaba.consumer
+  registry:
+    address: spring-cloud://localhost
+#
 spring:
   application:
     name: test-dubbo-tsf-alibaba-consumer
