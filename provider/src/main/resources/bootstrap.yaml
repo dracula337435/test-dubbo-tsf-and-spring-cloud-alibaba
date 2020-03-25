@@ -1,7 +1,7 @@
 #
 dubbo:
   scan:
-    base-package: io.dracula.test.dubbo.tsf.and.alibaba.provider
+    base-packages: io.dracula.test.dubbo.tsf.and.alibaba.provider
   protocol:
     name: dubbo
     port: -1
