@@ -18,17 +18,17 @@ public class ConsumerController {
     @Autowired
     private EchoByFeign echoByFeign;
 
-    @GetMapping("/echoController")
-    public String echoController(){
+    @GetMapping("/echoFeign")
+    public String echoFeign(){
         String result = echoByFeign.echo(null);
-        logger.info("将要返回："+result);
+        logger.info("echoFeign将要返回："+result);
         return result;
     }
 
-    @GetMapping("/redirectController")
-    public String redirectController(){
+    @GetMapping("/redirectFeign")
+    public String redirectFeign(){
         String result = echoByFeign.testRedirect();
-        logger.info("将要返回："+result);
+        logger.info("redirectFeign将要返回："+result);
         return result;
     }
 
