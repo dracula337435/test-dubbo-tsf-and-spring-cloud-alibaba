@@ -19,6 +19,7 @@
         <module>api</module>
         <module>provider</module>
         <module>consumer</module>
+        <module>consumer-non-dubbo-resttemplate</module>
     </modules>
 
     <dependencyManagement>

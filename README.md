@@ -17,4 +17,5 @@ dubbo.protocols.dubbo.port=20880
 
 ```DubboProtocol```中的```exporterMap```中有2个```entry```，一个是```DubboMetaDataService```，一个是真正的
 
-```spring-cloud-feign```支持```302 redirect```
+```spring-cloud-feign```支持```302 redirect```  
+```RestTemplate```也支持```302 redirect```。但是同时有```RestTemplate```和```spring-cloud-alibaba-dubbo```，会导致启动失败。

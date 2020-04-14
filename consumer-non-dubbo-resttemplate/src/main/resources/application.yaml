@@ -1,0 +1,6 @@
+#
+spring:
+  application:
+    name: test-dubbo-tsf-alibaba-consumer-non-dubbo
+server:
+  port: 8082
