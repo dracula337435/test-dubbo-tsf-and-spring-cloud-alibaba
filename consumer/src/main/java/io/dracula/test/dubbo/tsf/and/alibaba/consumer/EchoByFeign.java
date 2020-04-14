@@ -18,4 +18,11 @@ public interface EchoByFeign {
     @GetMapping("/echo")
     String echo(@RequestParam(value = "msg", defaultValue = "hello") String msg);
 
+    /**
+     *
+     * @return
+     */
+    @GetMapping("/testRedirect")
+    String testRedirect();
+
 }

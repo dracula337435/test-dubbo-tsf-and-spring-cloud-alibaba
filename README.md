@@ -14,3 +14,7 @@ dubbo.protocols.dubbo.port=20880
 此外，具体看了```feign```，用```jdk动态代理```实现，可见```ReflectiveFeign```的静态内部类```FeignInvocationHandler```
 
 ```spring-cloud-alibaba-dubbo```用的是```DubboInvocationHandler```把```feign```接口变成了```dubbo```，它在```TargeterInvocationHandler```中被用到
+
+```DubboProtocol```中的```exporterMap```中有2个```entry```，一个是```DubboMetaDataService```，一个是真正的
+
+```spring-cloud-feign```支持```302 redirect```

@@ -25,6 +25,13 @@ public class ConsumerController {
         return result;
     }
 
+    @GetMapping("/redirectController")
+    public String redirectController(){
+        String result = echoByFeign.testRedirect();
+        logger.info("将要返回："+result);
+        return result;
+    }
+
     @org.apache.dubbo.config.annotation.Reference
     private EchoService echoService;
 
